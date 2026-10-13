@@ -1,0 +1,30 @@
+{
+ "microsoft": {
+  "tin": 205,
+  "tout": 1,
+  "per_decision": 8.61e-06,
+  "per_million": 8.6,
+  "month_440k": 3.79
+ },
+ "typesafe": {
+  "tin": 518,
+  "tout": 82,
+  "per_decision": 2.1742349999999997e-05,
+  "per_million": 21.7,
+  "month_440k": 9.57
+ },
+ "laya": {
+  "tin": 213,
+  "tout": 0,
+  "per_decision": 0.0,
+  "per_million": 0.0,
+  "month_440k": 0.0
+ },
+ "llm": {
+  "tin": 214,
+  "tout": 35,
+  "per_decision": 0.00014181,
+  "per_million": 141.8,
+  "month_440k": 62.4
+ }
+}

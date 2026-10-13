@@ -1,0 +1,23 @@
+{
+ "detailed": {
+  "tin": 291,
+  "tout": 0,
+  "per_decision": 2.90625e-05,
+  "per_million": 29.1,
+  "month_440k": 12.79
+ },
+ "generic": {
+  "tin": 225,
+  "tout": 0,
+  "per_decision": 2.24625e-05,
+  "per_million": 22.5,
+  "month_440k": 9.88
+ },
+ "guided": {
+  "tin": 307,
+  "tout": 0,
+  "per_decision": 3.06625e-05,
+  "per_million": 30.7,
+  "month_440k": 13.49
+ }
+}

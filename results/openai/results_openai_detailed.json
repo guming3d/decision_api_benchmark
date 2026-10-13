@@ -1,0 +1,3362 @@
+[
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 1,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 375.1,
+  "total_ms": 375,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 279,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 2,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 262.3,
+  "total_ms": 262,
+  "p": {
+   "gpt-4.1-mini": 0.99,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.01,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 3,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 211.4,
+  "total_ms": 211,
+  "p": {
+   "gpt-4.1-mini": 0.13,
+   "gpt-4o": 0.87,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.84,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.84)",
+  "usage": {
+   "prompt_tokens": 296,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 4,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 218.6,
+  "total_ms": 218,
+  "p": {
+   "gpt-4.1-mini": 0.15,
+   "gpt-4o": 0.84,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.8,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.80)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 5,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 207.6,
+  "total_ms": 207,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 6,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 215.5,
+  "total_ms": 215,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.98,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 302,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 7,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 239.6,
+  "total_ms": 239,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 8,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 207.2,
+  "total_ms": 207,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.02,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 9,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 200.5,
+  "total_ms": 200,
+  "p": {
+   "gpt-4.1-mini": 0.04,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.01,
+   "gpt-6-luna": 0.93
+  },
+  "confidence": 0.91,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.91)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 10,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 226.0,
+  "total_ms": 225,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.98
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 285,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 11,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 199.9,
+  "total_ms": 199,
+  "p": {
+   "gpt-4.1-mini": 0.99,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 276,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 12,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 224.9,
+  "total_ms": 224,
+  "p": {
+   "gpt-4.1-mini": 0.98,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 279,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 13,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 268.8,
+  "total_ms": 268,
+  "p": {
+   "gpt-4.1-mini": 0.11,
+   "gpt-4o": 0.89,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.86,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.86)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 14,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 279.1,
+  "total_ms": 279,
+  "p": {
+   "gpt-4.1-mini": 0.08,
+   "gpt-4o": 0.89,
+   "gpt-4.1": 0.03,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.86,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.86)",
+  "usage": {
+   "prompt_tokens": 290,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 15,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 218.4,
+  "total_ms": 218,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 297,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 16,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 230.3,
+  "total_ms": 230,
+  "p": {
+   "gpt-4.1-mini": 0.11,
+   "gpt-4o": 0.19,
+   "gpt-4.1": 0.7,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.62,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.62)",
+  "usage": {
+   "prompt_tokens": 304,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 17,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 205.6,
+  "total_ms": 205,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 18,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 210.5,
+  "total_ms": 210,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.02,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 19,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 209.4,
+  "total_ms": 209,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 287,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "A",
+  "idx": 20,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 279.8,
+  "total_ms": 279,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 293,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 1,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 223.2,
+  "total_ms": 223,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 278,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 2,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 208.1,
+  "total_ms": 208,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 281,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 3,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 198.7,
+  "total_ms": 198,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.99,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 4,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 267.7,
+  "total_ms": 267,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.99,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 5,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 204.2,
+  "total_ms": 204,
+  "p": {
+   "gpt-4.1-mini": 0.39,
+   "gpt-4o": 0.15,
+   "gpt-4.1": 0.46,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.33,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.33)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 6,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 207.7,
+  "total_ms": 207,
+  "p": {
+   "gpt-4.1-mini": 0.15,
+   "gpt-4o": 0.05,
+   "gpt-4.1": 0.8,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.75,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.75)",
+  "usage": {
+   "prompt_tokens": 292,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 7,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 211.3,
+  "total_ms": 211,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.2,
+   "gpt-5.4": 0.77,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.71,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.71)",
+  "usage": {
+   "prompt_tokens": 311,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 8,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 223.2,
+  "total_ms": 223,
+  "p": {
+   "gpt-4.1-mini": 0.31,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.68,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.6,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.60)",
+  "usage": {
+   "prompt_tokens": 292,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 9,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 214.7,
+  "total_ms": 214,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 10,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 203.4,
+  "total_ms": 203,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.02,
+   "gpt-6-luna": 0.94
+  },
+  "confidence": 0.93,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.93)",
+  "usage": {
+   "prompt_tokens": 285,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 11,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 231.1,
+  "total_ms": 231,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 12,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 215.2,
+  "total_ms": 215,
+  "p": {
+   "gpt-4.1-mini": 0.98,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 13,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 199.5,
+  "total_ms": 199,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.98,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 293,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 14,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 286.1,
+  "total_ms": 286,
+  "p": {
+   "gpt-4.1-mini": 0.33,
+   "gpt-4o": 0.66,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.57,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.57)",
+  "usage": {
+   "prompt_tokens": 305,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 15,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 202.3,
+  "total_ms": 202,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 291,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 16,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 209.5,
+  "total_ms": 209,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 1.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 303,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 17,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 213.2,
+  "total_ms": 213,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.08,
+   "gpt-5.4": 0.9,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.87,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.87)",
+  "usage": {
+   "prompt_tokens": 309,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 18,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 209.8,
+  "total_ms": 209,
+  "p": {
+   "gpt-4.1-mini": 0.19,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.05,
+   "gpt-5.4": 0.73,
+   "gpt-6-luna": 0.01
+  },
+  "confidence": 0.66,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.66)",
+  "usage": {
+   "prompt_tokens": 314,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 19,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 216.0,
+  "total_ms": 216,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 1.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 0,
+  "set": "B",
+  "idx": 20,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 201.7,
+  "total_ms": 201,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.98
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 1,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 198.8,
+  "total_ms": 198,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 279,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 2,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 205.7,
+  "total_ms": 205,
+  "p": {
+   "gpt-4.1-mini": 0.99,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.01,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 3,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 215.2,
+  "total_ms": 215,
+  "p": {
+   "gpt-4.1-mini": 0.13,
+   "gpt-4o": 0.87,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.84,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.84)",
+  "usage": {
+   "prompt_tokens": 296,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 4,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 219.7,
+  "total_ms": 219,
+  "p": {
+   "gpt-4.1-mini": 0.15,
+   "gpt-4o": 0.84,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.8,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.80)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 5,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 230.0,
+  "total_ms": 230,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 6,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 210.4,
+  "total_ms": 210,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.98,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 302,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 7,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 270.7,
+  "total_ms": 270,
+  "p": {
+   "gpt-4.1-mini": 0.02,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.03,
+   "gpt-5.4": 0.94,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.93,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.93)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 8,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 226.5,
+  "total_ms": 226,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.02,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 9,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 218.4,
+  "total_ms": 218,
+  "p": {
+   "gpt-4.1-mini": 0.04,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.01,
+   "gpt-6-luna": 0.93
+  },
+  "confidence": 0.91,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.91)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 10,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 210.6,
+  "total_ms": 210,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.98
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 285,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 11,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 216.6,
+  "total_ms": 216,
+  "p": {
+   "gpt-4.1-mini": 0.99,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 276,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 12,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 237.3,
+  "total_ms": 237,
+  "p": {
+   "gpt-4.1-mini": 0.98,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 279,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 13,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 211.6,
+  "total_ms": 211,
+  "p": {
+   "gpt-4.1-mini": 0.11,
+   "gpt-4o": 0.89,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.86,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.86)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 14,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 232.3,
+  "total_ms": 232,
+  "p": {
+   "gpt-4.1-mini": 0.08,
+   "gpt-4o": 0.89,
+   "gpt-4.1": 0.03,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.86,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.86)",
+  "usage": {
+   "prompt_tokens": 290,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 15,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 198.2,
+  "total_ms": 198,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 297,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 16,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 207.8,
+  "total_ms": 207,
+  "p": {
+   "gpt-4.1-mini": 0.11,
+   "gpt-4o": 0.19,
+   "gpt-4.1": 0.7,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.62,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.62)",
+  "usage": {
+   "prompt_tokens": 304,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 17,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 212.8,
+  "total_ms": 212,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 18,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 204.9,
+  "total_ms": 204,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.02,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 19,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 213.4,
+  "total_ms": 213,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 287,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "A",
+  "idx": 20,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 206.1,
+  "total_ms": 206,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 293,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 1,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 196.2,
+  "total_ms": 196,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 278,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 2,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 263.3,
+  "total_ms": 263,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 281,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 3,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 207.8,
+  "total_ms": 207,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.99,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 4,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 201.9,
+  "total_ms": 201,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.99,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 5,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 254.5,
+  "total_ms": 254,
+  "p": {
+   "gpt-4.1-mini": 0.39,
+   "gpt-4o": 0.15,
+   "gpt-4.1": 0.46,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.33,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.33)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 6,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 194.4,
+  "total_ms": 194,
+  "p": {
+   "gpt-4.1-mini": 0.15,
+   "gpt-4o": 0.05,
+   "gpt-4.1": 0.8,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.75,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.75)",
+  "usage": {
+   "prompt_tokens": 292,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 7,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 217.5,
+  "total_ms": 217,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.2,
+   "gpt-5.4": 0.77,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.71,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.71)",
+  "usage": {
+   "prompt_tokens": 311,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 8,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 200.7,
+  "total_ms": 200,
+  "p": {
+   "gpt-4.1-mini": 0.31,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.68,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.6,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.60)",
+  "usage": {
+   "prompt_tokens": 292,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 9,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 208.5,
+  "total_ms": 208,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 10,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 556.9,
+  "total_ms": 556,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.01,
+   "gpt-6-luna": 0.98
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 285,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 11,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 222.3,
+  "total_ms": 222,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 12,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 266.6,
+  "total_ms": 266,
+  "p": {
+   "gpt-4.1-mini": 0.98,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 13,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 250.8,
+  "total_ms": 250,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.98,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 293,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 14,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 200.3,
+  "total_ms": 200,
+  "p": {
+   "gpt-4.1-mini": 0.33,
+   "gpt-4o": 0.66,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.57,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.57)",
+  "usage": {
+   "prompt_tokens": 305,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 15,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 245.1,
+  "total_ms": 245,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 291,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 16,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 211.3,
+  "total_ms": 211,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 1.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 303,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 17,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 224.7,
+  "total_ms": 224,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.08,
+   "gpt-5.4": 0.9,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.87,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.87)",
+  "usage": {
+   "prompt_tokens": 309,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 18,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 210.3,
+  "total_ms": 210,
+  "p": {
+   "gpt-4.1-mini": 0.19,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.05,
+   "gpt-5.4": 0.73,
+   "gpt-6-luna": 0.01
+  },
+  "confidence": 0.66,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.66)",
+  "usage": {
+   "prompt_tokens": 314,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 19,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 209.8,
+  "total_ms": 209,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 1.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 1,
+  "set": "B",
+  "idx": 20,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 208.4,
+  "total_ms": 208,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.98
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 1,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 213.7,
+  "total_ms": 213,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 279,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 2,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 216.2,
+  "total_ms": 216,
+  "p": {
+   "gpt-4.1-mini": 0.99,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.01,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 3,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 221.2,
+  "total_ms": 221,
+  "p": {
+   "gpt-4.1-mini": 0.13,
+   "gpt-4o": 0.87,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.84,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.84)",
+  "usage": {
+   "prompt_tokens": 296,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 4,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 229.0,
+  "total_ms": 229,
+  "p": {
+   "gpt-4.1-mini": 0.15,
+   "gpt-4o": 0.84,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.8,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.80)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 5,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 224.3,
+  "total_ms": 224,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 6,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 221.0,
+  "total_ms": 220,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.98,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 302,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 7,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 217.3,
+  "total_ms": 217,
+  "p": {
+   "gpt-4.1-mini": 0.02,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.03,
+   "gpt-5.4": 0.94,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.93,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.93)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 8,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 246.4,
+  "total_ms": 246,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.02,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 9,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 232.0,
+  "total_ms": 232,
+  "p": {
+   "gpt-4.1-mini": 0.04,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.01,
+   "gpt-6-luna": 0.93
+  },
+  "confidence": 0.91,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.91)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 10,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 219.9,
+  "total_ms": 219,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.98
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 285,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 11,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 227.7,
+  "total_ms": 227,
+  "p": {
+   "gpt-4.1-mini": 0.99,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 276,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 12,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 219.0,
+  "total_ms": 218,
+  "p": {
+   "gpt-4.1-mini": 0.98,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 279,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 13,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 211.9,
+  "total_ms": 211,
+  "p": {
+   "gpt-4.1-mini": 0.11,
+   "gpt-4o": 0.89,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.86,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.86)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 14,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 207.5,
+  "total_ms": 207,
+  "p": {
+   "gpt-4.1-mini": 0.08,
+   "gpt-4o": 0.89,
+   "gpt-4.1": 0.03,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.86,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.86)",
+  "usage": {
+   "prompt_tokens": 290,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 15,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 216.1,
+  "total_ms": 216,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 297,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 16,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 214.2,
+  "total_ms": 214,
+  "p": {
+   "gpt-4.1-mini": 0.11,
+   "gpt-4o": 0.19,
+   "gpt-4.1": 0.7,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.62,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.62)",
+  "usage": {
+   "prompt_tokens": 304,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 17,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 219.6,
+  "total_ms": 219,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 288,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 18,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 216.5,
+  "total_ms": 216,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.02,
+   "gpt-5.4": 0.98,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 19,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 229.2,
+  "total_ms": 229,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 287,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "A",
+  "idx": 20,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 225.4,
+  "total_ms": 225,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 293,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 1,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 247.2,
+  "total_ms": 247,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 278,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 2,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 240.4,
+  "total_ms": 240,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 281,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 3,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 205.3,
+  "total_ms": 205,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.99,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 4,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 221.0,
+  "total_ms": 221,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.99,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 295,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 5,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 208.9,
+  "total_ms": 208,
+  "p": {
+   "gpt-4.1-mini": 0.39,
+   "gpt-4o": 0.15,
+   "gpt-4.1": 0.46,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.33,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.33)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 6,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 231.0,
+  "total_ms": 231,
+  "p": {
+   "gpt-4.1-mini": 0.15,
+   "gpt-4o": 0.05,
+   "gpt-4.1": 0.8,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.75,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.75)",
+  "usage": {
+   "prompt_tokens": 292,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 7,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 212.4,
+  "total_ms": 212,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.2,
+   "gpt-5.4": 0.77,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.71,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.71)",
+  "usage": {
+   "prompt_tokens": 311,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 8,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 232.0,
+  "total_ms": 232,
+  "p": {
+   "gpt-4.1-mini": 0.31,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.68,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.6,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.60)",
+  "usage": {
+   "prompt_tokens": 292,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 9,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 217.1,
+  "total_ms": 217,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.99
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 286,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 10,
+  "lang": "EN",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 275.9,
+  "total_ms": 275,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.02,
+   "gpt-6-luna": 0.94
+  },
+  "confidence": 0.93,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.93)",
+  "usage": {
+   "prompt_tokens": 285,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 11,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 229.7,
+  "total_ms": 229,
+  "p": {
+   "gpt-4.1-mini": 1.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 12,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1-mini",
+  "got": "gpt-4.1-mini",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 224.5,
+  "total_ms": 224,
+  "p": {
+   "gpt-4.1-mini": 0.98,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1-mini (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 277,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 13,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 214.6,
+  "total_ms": 214,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.98,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 293,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 14,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4o",
+  "got": "gpt-4o",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 220.3,
+  "total_ms": 220,
+  "p": {
+   "gpt-4.1-mini": 0.33,
+   "gpt-4o": 0.66,
+   "gpt-4.1": 0.01,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.57,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4o (confidence 0.57)",
+  "usage": {
+   "prompt_tokens": 305,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 15,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 221.0,
+  "total_ms": 221,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.99,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.99,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 0.99)",
+  "usage": {
+   "prompt_tokens": 291,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 16,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-4.1",
+  "got": "gpt-4.1",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 217.1,
+  "total_ms": 217,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 1.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-4.1 (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 303,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 17,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 210.0,
+  "total_ms": 209,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.08,
+   "gpt-5.4": 0.9,
+   "gpt-6-luna": 0.0
+  },
+  "confidence": 0.87,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.87)",
+  "usage": {
+   "prompt_tokens": 309,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 18,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-5.4",
+  "got": "gpt-5.4",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 219.7,
+  "total_ms": 219,
+  "p": {
+   "gpt-4.1-mini": 0.19,
+   "gpt-4o": 0.02,
+   "gpt-4.1": 0.05,
+   "gpt-5.4": 0.73,
+   "gpt-6-luna": 0.01
+  },
+  "confidence": 0.66,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-5.4 (confidence 0.66)",
+  "usage": {
+   "prompt_tokens": 314,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 19,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 210.2,
+  "total_ms": 210,
+  "p": {
+   "gpt-4.1-mini": 0.0,
+   "gpt-4o": 0.0,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 1.0
+  },
+  "confidence": 1.0,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 1.00)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ },
+ {
+  "round": 2,
+  "set": "B",
+  "idx": 20,
+  "lang": "ZH",
+  "engine": "openai",
+  "want": "gpt-6-luna",
+  "got": "gpt-6-luna",
+  "ok": true,
+  "correct": true,
+  "decision_ms": 194.5,
+  "total_ms": 194,
+  "p": {
+   "gpt-4.1-mini": 0.01,
+   "gpt-4o": 0.01,
+   "gpt-4.1": 0.0,
+   "gpt-5.4": 0.0,
+   "gpt-6-luna": 0.98
+  },
+  "confidence": 0.98,
+  "error": null,
+  "checkpoint": null,
+  "rationale": "Decision API picked gpt-6-luna (confidence 0.98)",
+  "usage": {
+   "prompt_tokens": 289,
+   "completion_tokens": 0
+  }
+ }
+]
