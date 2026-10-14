@@ -1,10 +1,11 @@
 """Run every prompt in data/prompts.json through the OpenAI Decision API (client.decisions.create).
 
-Usage: OPENAI_API_KEY=... python3 scripts/bench_openai.py [rounds] [guided|generic|detailed]
+Usage: OPENAI_API_KEY=... python3 scripts/bench_openai.py [rounds] [original|guided|generic|detailed]
 Writes results/openai/results_openai_<catalog>.json (same record shape as results/router/results.json,
 engine="openai") and results/openai/summary_openai_<catalog>.json.
 
-The router's model catalog is not available here, so there are three choice-description sets:
+The default original catalog uses the same model descriptions as the router benchmark.
+The earlier experimental catalogs retain their original routing instructions:
   detailed - written after seeing the prompts; names task types that appear in the test set (optimistic)
   generic  - only the catalog-level phrases quoted in the LLM engine's rationales in results.json (pessimistic)
   guided   - follows the Decisions guide: say when each option applies, in observable terms, without
@@ -20,9 +21,20 @@ OUT = ROOT / "results" / "openai"
 
 MODEL = "gpt-6-luna"
 ROUNDS = int(sys.argv[1]) if len(sys.argv) > 1 else 3
-INSTRUCTIONS = ("Which model should handle this user request? Choose the model whose strengths best match "
-                "the request's type and difficulty; prefer the cheaper model when it is good enough.")
-CATALOG = sys.argv[2] if len(sys.argv) > 2 else "guided"
+INSTRUCTIONS = ("Which backend model should handle `user_request`? "
+                "Pick the option whose description best matches what the request needs. "
+                "Prefer a cheaper, faster model when the request is simple, and a stronger model only when the request needs it.")
+CRITERIA = {
+    "gpt-4.1-mini": "Cheapest and fastest. Greetings, chit-chat, trivial one-line questions, simple translation.",
+    "gpt-4o": "Fast general-purpose model. Summaries, rewriting, format conversion, short everyday answers.",
+    "gpt-4.1": "Solid coding model. Everyday programming, writing and explaining code, moderate debugging.",
+    "gpt-5.4": "Strongest reasoning model. Hard algorithms, mathematical proofs, complex system design, deep multi-step analysis.",
+    "gpt-6-luna": "Creative long-form writing: stories, poems, marketing copy, storytelling.",
+}
+ORIGINAL = [{"value": model, "description": description} for model, description in CRITERIA.items()]
+LEGACY_INSTRUCTIONS = ("Which model should handle this user request? Choose the model whose strengths best match "
+                       "the request's type and difficulty; prefer the cheaper model when it is good enough.")
+CATALOG = sys.argv[2] if len(sys.argv) > 2 else "original"
 DETAILED = [
     {"value": "gpt-4.1-mini", "description": "Fastest, cheapest model. Greetings, chit-chat, thanks and trivial one-line factual questions."},
     {"value": "gpt-4o", "description": "Fast general-purpose model. Short summaries, rewriting or polishing text, list/format conversion."},
@@ -44,14 +56,17 @@ GUIDED = [
     {"value": "gpt-5.4", "description": "Use when the request needs extended multi-step reasoning: a mathematical proof or derivation, or open-ended analysis or design of a complex system."},
     {"value": "gpt-6-luna", "description": "Use when the request asks for original creative writing where tone and style matter, such as fiction or persuasive copy."},
 ]
-CHOICES = {"detailed": DETAILED, "generic": GENERIC, "guided": GUIDED}[CATALOG]
-QUESTIONS = [{"type": "choice", "name": "route", "instructions": INSTRUCTIONS, "choices": CHOICES}]
+CHOICES = {"original": ORIGINAL, "detailed": DETAILED, "generic": GENERIC, "guided": GUIDED}[CATALOG]
+QUESTIONS = [{"type": "choice", "name": "route",
+              "instructions": INSTRUCTIONS if CATALOG == "original" else LEGACY_INSTRUCTIONS, "choices": CHOICES}]
 
 client = OpenAI(max_retries=3, timeout=30)
 
 def decide(text):
+    # original: INSTRUCTIONS refer to `user_request`, so pass the request under that name, as the router does
+    payload = json.dumps({"user_request": text}, ensure_ascii=False) if CATALOG == "original" else text
     t0 = time.perf_counter()
-    d = client.decisions.create(model=MODEL, input=text, questions=QUESTIONS)
+    d = client.decisions.create(model=MODEL, input=payload, questions=QUESTIONS)
     return d, (time.perf_counter() - t0) * 1000
 
 def record(rnd, setname, idx, lang, want, text):
@@ -76,8 +91,11 @@ def record(rnd, setname, idx, lang, want, text):
 
 prompts = json.load(open(ROOT / "data" / "prompts.json"))
 out = []
-# warm-up: one call, not recorded (connection setup)
-decide("hello")
+# warm-up: one call, not recorded (connection setup); a failure here should not stop the run
+try:
+    decide("hello")
+except Exception as ex:
+    print(f"warm-up failed, continuing: {type(ex).__name__}: {ex}", flush=True)
 for rnd in range(ROUNDS):
     for setname in ("A", "B"):
         for i, (lang, text, want) in enumerate(prompts[setname]):

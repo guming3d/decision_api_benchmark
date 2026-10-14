@@ -19,13 +19,15 @@ The benchmark dataset comes from Xuefeng Yin's model routing test:
 
 **Added in this repo:**
 
-- One new engine: the **OpenAI Decision API** (`gpt-6-luna`). It is tested on the same 40 requests, with the same expected models and the same 3-round method.
+- One new engine: the **OpenAI Decision API** (`gpt-6-luna`). It is tested on the same 40 requests, with the same expected models, the same model descriptions and routing instructions, and the same 3-round method.
 - The OpenAI test script (`scripts/bench_openai.py`) and its results (`results/openai/`)
 - The OpenAI Decision API as a fifth engine in the charts and the report, plus the merge step (`scripts/merge_results.py`)
 
 The four original engines were not re-run here. Their numbers are copied from the original test.
 
 ## Results
+
+All five engines see the same five model descriptions and the same routing instructions as the original router benchmark.
 
 - Full report: [docs/model_routing_benchmark.md](docs/model_routing_benchmark.md)
 
@@ -34,10 +36,12 @@ The four original engines were not re-run here. Their numbers are copied from th
 | Decision engine | Correct (/40) | Median decision time | Cost per 1M decisions | Source |
 |---|---|---|---|---|
 | TypeSafe Jev | 39.3 | 350 ms | $21.7 | Original article |
-| **OpenAI Decision API (`gpt-6-luna`)** | **39** | **229 ms** | **$30.7** | **This repo** |
 | Microsoft-Decision-1 | 37.7 | 541 ms | $8.6 | Original article |
 | LLM (`gpt-4.1-mini`) | 36 | 1.43 s | $141.8 | Original article |
+| **OpenAI Decision API (`gpt-6-luna`)** | **31** | **229 ms** | **$29.2** | **This repo** |
 | Self-hosted Laya | 20 | 127 ms | $0 | Original article |
+
+With the same descriptions, the OpenAI Decision API often chose the cheapest model, `gpt-4.1-mini`, for requests that needed `gpt-4o`, `gpt-4.1` or `gpt-6-luna`. It made the same 9 mistakes in all 3 runs.
 
 ## Repository layout
 
@@ -85,32 +89,40 @@ On Linux, install a CJK font so the Chinese charts render correctly, for example
 
 ```bash
 export OPENAI_API_KEY=sk-...
-python scripts/bench_openai.py 3 guided
+python scripts/bench_openai.py 3 original
 ```
 
 - The first argument is the number of rounds (default `3`).
-- The second argument picks which model descriptions the Decision API sees (default `guided`):
+- The second argument picks which model descriptions the Decision API sees (default `original`):
 
 | Option | Model descriptions | Result in our run |
 |---|---|---|
-| `guided` | Say when to pick each model, following [OpenAI's Decisions guide](https://developers.openai.com/api/docs/guides/decisions). They don't name the test topics. **Use this one for fair comparisons.** | 39 / 40 |
-| `generic` | Very short labels, such as "Fast general-purpose model." | 14.7 / 40 |
-| `detailed` | Written after seeing the test requests, so they name the test topics. Treat this as an upper bound. | 40 / 40 |
+| `original` | The original router model descriptions and routing instructions, word for word. **Use this for fair comparisons.** | 31 / 40 |
+| `guided` | Historical experiment following [OpenAI's Decisions guide](https://developers.openai.com/api/docs/guides/decisions); descriptions don't name the test topics. | 39 / 40 |
+| `generic` | Historical experiment with very short labels, such as "Fast general-purpose model." | 14.7 / 40 |
+| `detailed` | Historical experiment written after seeing the requests; names the test topics and is an upper bound. | 40 / 40 |
+
+- `original` uses `INSTRUCTIONS` and `CRITERIA` in `scripts/bench_openai.py` word for word. The request is sent as `{"user_request": "..."}`, because the instructions refer to `user_request`.
+- The three historical options keep their earlier routing instructions, so their saved results can still be reproduced.
 
 The script prints one line per request and writes:
 
 - `results/openai/results_openai_<option>.json`: one record per request and round
 - `results/openai/summary_openai_<option>.json`: the summary of that run
 
-A 3-round run makes 121 API calls, including one warm-up call. Each call uses about 300 input tokens. At $0.10 per 1M input tokens, the whole run costs less than $0.01.
+A 3-round run makes 121 API calls, including one warm-up call. With `original`, each call uses about 290 input tokens. At $0.10 per 1M input tokens, the whole run costs less than $0.01.
+
+The first call on a new connection can take tens of seconds. The warm-up call absorbs this and is not recorded.
 
 ### 3. Rebuild summaries and costs
 
 ```bash
-python scripts/merge_results.py guided
+python scripts/merge_results.py original
 ```
 
 This rebuilds every summary and cost file from the raw results. It then merges the four router engines and the chosen OpenAI run into `results/summary.json` and `results/cost.json`.
+
+The argument picks which OpenAI run goes into the charts (default `original`). If that run's raw results are missing, the script stops with an error.
 
 ### 4. Render the charts
 
@@ -163,9 +175,9 @@ Each entry in `data/prompts.json` is `[language, request, expected model]`:
 
 ### Change the candidate models or their descriptions
 
-- Edit the `GUIDED`, `GENERIC` or `DETAILED` lists in `scripts/bench_openai.py`.
-- Each entry has a `value` (the model name the engine returns) and a `description` (when to pick it).
-- The routing question itself is in `INSTRUCTIONS`.
+- The model descriptions are in `CRITERIA` in `scripts/bench_openai.py`, and the routing question is in `INSTRUCTIONS`.
+- Keep both identical to the router's prompt, so the comparison with the other engines stays fair.
+- `GUIDED`, `GENERIC` and `DETAILED` are older experiments. They use `LEGACY_INSTRUCTIONS`.
 
 ### Change prices
 
@@ -173,5 +185,6 @@ Prices per 1M tokens are in `PRICES` in `scripts/metrics.py`. Re-run `merge_resu
 
 ## Notes
 
-- In the original test, the four engines were timed inside Model Router on an Apple M4 Pro in Asia, which called Foundry and Azure OpenAI in East US 2 (11 Oct 2026). In this repo, the OpenAI Decision API was timed on a separate Linux client calling OpenAI directly (13 Oct 2026). Because the setups differ, compare decision times with care.
-- The router engines used the router's own model catalog. The OpenAI Decision API used the descriptions in `scripts/bench_openai.py`. Accuracy depends heavily on these descriptions.
+- In the original test, the four engines were timed inside Model Router on an Apple M4 Pro in Asia, which called Foundry and Azure OpenAI in East US 2 (11 Oct 2026). In this repo, the OpenAI Decision API was timed on a separate Linux client calling OpenAI directly (14 Oct 2026). Because the setups differ, compare decision times with care.
+- All five engines used the same model descriptions and routing instructions.
+- The OpenAI Decision API is very sensitive to these descriptions. With descriptions we wrote ourselves, it scored 14.7 to 40 out of 40 (`generic`, `guided`, `detailed`). Only the `original` result (31 / 40) uses the same descriptions as the other engines.

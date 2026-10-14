@@ -14,12 +14,12 @@ T = {"en": dict(t="Cost vs accuracy: closer to the top-left is better",
                 s="5 decision engines on the same 40 routing requests · accuracy = mean of 3 runs · cost from measured billed tokens",
                 x="Cost per million decisions (USD)", y="Correct picks", best="Better: cheaper and more accurate",
                 cheaper="cheaper", accurate="more accurate", laya_note="$0 per call, needs your own GPU machine",
-                foot="Decision-1 and Jev: $0.042 per million input tokens, output free. gpt-4.1-mini: Azure Global Standard $0.40 / $1.60 per million. OpenAI Decision API (gpt-6-luna): $0.10 per million input tokens, output free. 11–13 Oct 2026."),
+                foot="Decision-1 and Jev: $0.042 per million input tokens, output free. gpt-4.1-mini: Azure Global Standard $0.40 / $1.60 per million. OpenAI Decision API (gpt-6-luna): $0.10 per million input tokens, output free. 11–14 Oct 2026."),
      "zh": dict(t="费用 vs 准确率：越靠左上角越好",
                 s="5 个决策引擎、同样 40 个路由请求 · 准确率为 3 轮平均 · 费用按实测计费 token 计算",
                 x="每百万次决策的费用（美元）", y="选对比例", best="更便宜、更准",
                 cheaper="更便宜", accurate="更准", laya_note="按次 0 美元，需自备 GPU 机器",
-                foot="Decision-1 与 Jev：每百万输入 token 0.042 美元，输出免费。gpt-4.1-mini：Azure 全球标准部署，每百万输入 0.40 / 输出 1.60 美元。OpenAI Decision API（gpt-6-luna）：每百万输入 token 0.10 美元，输出免费。2026-10-11 至 10-13。")}[LANG]
+                foot="Decision-1 与 Jev：每百万输入 token 0.042 美元，输出免费。gpt-4.1-mini：Azure 全球标准部署，每百万输入 0.40 / 输出 1.60 美元。OpenAI Decision API（gpt-6-luna）：每百万输入 token 0.10 美元，输出免费。2026-10-11 至 10-14。")}[LANG]
 pts = {e: (C[e]["per_million"], (st.mean(S[e]["A-ALL"]) + st.mean(S[e]["B-ALL"])) / 40 * 100) for e in E}
 W, H = 920, 520; L, R, TOP, B = 90, 30, 20, 60
 x0, x1, y0, y1 = 0, 160, 40, 104
@@ -38,7 +38,7 @@ g.append(f'<line x1="{L}" x2="{W-R}" y1="{H-B}" y2="{H-B}" class="axis"/><line x
 g.append(f'<text x="{(L+W-R)/2}" y="{H-12}" class="atitle" text-anchor="middle">{T["x"]}　←　{T["cheaper"]}</text>')
 g.append(f'<text transform="translate(24,{(TOP+H-B)/2}) rotate(-90)" class="atitle" text-anchor="middle">{T["y"]}　→　{T["accurate"]}</text>')
 # label placement: (dx, dy, anchor)
-place = {"microsoft": (16, 30, "start"), "typesafe": (0, -36, "middle"), "laya": (16, 6, "start"), "llm": (-16, -16, "end"), "openai": (16, -4, "start")}
+place = {"microsoft": (16, 30, "start"), "typesafe": (0, -36, "middle"), "laya": (16, 6, "start"), "llm": (-16, -16, "end"), "openai": (16, 30, "start")}
 for e in E:
     c, a = pts[e]; px, py = X(c), Y(a); dx, dy, anc = place[e]
     cost = ("$0" if c == 0 else f"${c:.1f}")

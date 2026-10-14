@@ -28,10 +28,10 @@
   "month_440k": 62.4
  },
  "openai": {
-  "tin": 307,
+  "tin": 292,
   "tout": 0,
-  "per_decision": 3.06625e-05,
-  "per_million": 30.7,
-  "month_440k": 13.49
+  "per_decision": 2.91625e-05,
+  "per_million": 29.2,
+  "month_440k": 12.83
  }
 }

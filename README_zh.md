@@ -19,13 +19,15 @@
 
 **本项目新增内容：**
 
-- 补充评测第 5 个引擎：**OpenAI Decision API**（基于 `gpt-6-luna`）。在完全相同的 40 条测试请求、相同的候选模型定义与 3 轮独立测试方法下完成评测
+- 补充评测第 5 个引擎：**OpenAI Decision API**（基于 `gpt-6-luna`）。使用相同的 40 条测试请求、期望答案、模型描述与路由指令，以及相同的 3 轮独立测试方法
 - OpenAI 评测脚本（`scripts/bench_openai.py`）及实测结果数据（`results/openai/`）
 - 将 OpenAI Decision API 作为第 5 个引擎整合进图表与完整报告中，并提供数据合并脚本（`scripts/merge_results.py`）
 
 说明：原文章中的 4 个引擎在本项目中未重复发起调用，直接沿用了原实测数据。
 
 ## 评测结果概览
+
+5 个引擎使用相同的 5 条模型描述，以及与原路由器评测相同的路由指令。
 
 - 完整分析报告：[docs/model_routing_benchmark_zh.md](docs/model_routing_benchmark_zh.md)
 
@@ -34,10 +36,12 @@
 | 决策引擎 | 选对次数（共 40 题） | 决策耗时中位数 | 百万次决策费用 | 数据来源 |
 |---|---|---|---|---|
 | TypeSafe Jev | 39.3 | 350 ms | $21.7 | 原文实测 |
-| **OpenAI Decision API (`gpt-6-luna`)** | **39** | **229 ms** | **$30.7** | **本项目实测** |
 | Microsoft-Decision-1 | 37.7 | 541 ms | $8.6 | 原文实测 |
 | LLM (`gpt-4.1-mini`) | 36 | 1.43 s | $141.8 | 原文实测 |
+| **OpenAI Decision API (`gpt-6-luna`)** | **31** | **229 ms** | **$29.2** | **本项目实测** |
 | 自部署 Laya | 20 | 127 ms | $0 | 原文实测 |
+
+在相同描述下，OpenAI Decision API 经常把本应交给 `gpt-4o`、`gpt-4.1` 或 `gpt-6-luna` 的请求分给最便宜的 `gpt-4.1-mini`。3 轮测试中，它每轮都犯了同样的 9 个错误。
 
 ## 项目目录结构
 
@@ -86,32 +90,40 @@ playwright install chromium     # 仅用于图表渲染
 
 ```bash
 export OPENAI_API_KEY=sk-...
-python scripts/bench_openai.py 3 guided
+python scripts/bench_openai.py 3 original
 ```
 
 - 第一个参数指定测试轮数（默认 `3` 轮）。
-- 第二个参数指定传递给 Decision API 的模型描述策略（默认 `guided`）：
+- 第二个参数指定传递给 Decision API 的模型描述策略（默认 `original`）：
 
 | 策略参数 | 模型描述方式 | 本次实测表现 |
 |---|---|---|
-| `guided` | 遵循 [OpenAI Decisions 官方指南规范](https://developers.openai.com/api/docs/guides/decisions)，明确各模型适用的任务类型，不提及任何具体测试题。**用于公平客观对比，推荐使用此项。** | 39 / 40 |
-| `generic` | 极简描述，如“通用快速模型”。 | 14.7 / 40 |
-| `detailed` | 针对测试题目量身编写的详细描述，直接包含测试话题。可作为准确率上限参考。 | 40 / 40 |
+| `original` | 逐字采用原路由器的模型描述与路由指令。**用于公平的横向对比，推荐使用此项。** | 31 / 40 |
+| `guided` | 历史实验：遵循 [OpenAI Decisions 官方指南规范](https://developers.openai.com/api/docs/guides/decisions)，不提及具体测试话题。 | 39 / 40 |
+| `generic` | 历史实验：极简描述，如“通用快速模型”。 | 14.7 / 40 |
+| `detailed` | 历史实验：看到测试题后编写，直接包含测试话题，可作为准确率上限参考。 | 40 / 40 |
+
+- `original` 逐字使用 `scripts/bench_openai.py` 中的 `INSTRUCTIONS` 与 `CRITERIA`。由于指令中提到了 `user_request`，请求会以 `{"user_request": "..."}` 的形式发送。
+- 三个历史策略保留原先的路由指令，以便复现已保存的结果。
 
 脚本在终端中会逐行打印每条请求的路由结果，并在结束后生成：
 
 - `results/openai/results_openai_<option>.json`：记录每轮每个请求的详细结果
 - `results/openai/summary_openai_<option>.json`：该次测试的指标汇总
 
-运行完整的 3 轮测试共发起 121 次 API 调用（含 1 次预热）。每次请求约消耗 300 个 input token。按照每百万 input token $0.10 的官方定价，整套跑下来总花费不足 1 美分（< $0.01）。
+运行完整的 3 轮测试共发起 121 次 API 调用（含 1 次预热）。使用 `original` 时，每次调用约消耗 290 个 input token，按每百万 input token $0.10 计费，总花费不足 1 美分（< $0.01）。
+
+新连接上的第一次调用可能需要几十秒。预热调用会承担这部分耗时，且不计入结果。
 
 ### 3. 重新聚合汇总与成本数据
 
 ```bash
-python scripts/merge_results.py guided
+python scripts/merge_results.py original
 ```
 
 从原始结果文件中重新计算每个引擎的指标与费用，将 4 个路由引擎与所选的 OpenAI 测试结果合并，输出至 `results/summary.json` 和 `results/cost.json`。
+
+参数用于指定哪一次 OpenAI 测试进入图表（默认 `original`）。如果缺少该测试的原始结果，脚本会报错退出。
 
 ### 4. 渲染可视化图表
 
@@ -164,9 +176,9 @@ python scripts/merge_results.py
 
 ### 调整候选模型及其描述文本
 
-- 修改 `scripts/bench_openai.py` 中的 `GUIDED`、`GENERIC` 或 `DETAILED` 列表。
-- 每个条目包含 `value`（引擎输出的模型名称）和 `description`（何时选择该模型的判定规则）。
-- 路由引导 prompt 定义在 `INSTRUCTIONS` 变量中。
+- 模型描述位于 `scripts/bench_openai.py` 的 `CRITERIA` 中，路由问题位于 `INSTRUCTIONS` 中。
+- 请保持两者与原路由器的 prompt 完全一致，确保与其他引擎的对比公平。
+- `GUIDED`、`GENERIC` 和 `DETAILED` 是早期实验，使用 `LEGACY_INSTRUCTIONS`。
 
 ### 调整模型单价
 
@@ -174,5 +186,5 @@ python scripts/merge_results.py
 
 ## 说明与注意事项
 
-- **网络环境与测试链路差异**：原文中的 4 个引擎是在位于亚洲的 Apple M4 Pro 上通过 Model Router 内部统计耗时，跨洋调用了部署在美国东部 2（East US 2）的 Foundry 与 Azure OpenAI 服务（测试时间为 2026-10-11）；而本项目的 OpenAI Decision API 则是在另一台独立的 Linux 客户端直接公网调用 OpenAI 官方接口测得（测试时间为 2026-10-13）。两者的网络环境和调用链路不同，横向对比决策耗时时请留意这一差异。
-- **模型描述质量对效果起决定性作用**：路由器引擎使用的是 Model Router 内部自带的模型元数据；OpenAI Decision API 使用的是 `scripts/bench_openai.py` 中编写的选项描述。实际准确率很大程度上取决于这些描述的编写质量。
+- **网络环境与测试链路差异**：原文中的 4 个引擎是在位于亚洲的 Apple M4 Pro 上通过 Model Router 内部统计耗时，跨洋调用了部署在美国东部 2（East US 2）的 Foundry 与 Azure OpenAI 服务（测试时间为 2026-10-11）；而本项目的 OpenAI Decision API 则是在另一台独立的 Linux 客户端直接公网调用 OpenAI 官方接口测得（测试时间为 2026-10-14）。两者的网络环境和调用链路不同，横向对比决策耗时时请留意这一差异。
+- **模型描述对效果影响很大**：5 个引擎使用相同的模型描述与路由指令。OpenAI Decision API 对描述非常敏感：使用我们自己编写的描述时，成绩在 14.7 到 40 / 40 之间（`generic`、`guided`、`detailed`）。只有 `original` 的结果（31 / 40）与其他引擎使用相同描述。

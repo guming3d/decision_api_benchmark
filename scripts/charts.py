@@ -15,7 +15,7 @@ T = {"en": dict(
         setA="Set A: the Laya-article requests (easy)", setB="Set B: realistic Copilot-style requests (harder)",
         lat_t="Decision time per request", lat_s="Measured inside Model Router (OpenAI: at the client) · median and 95th percentile · 3 runs × 40 requests per engine",
         p50="median", p95="95th percentile",
-        foot="Expected model per request set by hand before the run. Router on Apple M4 Pro in Asia; Foundry and Azure OpenAI in East US 2; Laya on the same Mac. 11 Oct 2026. OpenAI Decision API (gpt-6-luna) called directly from a separate Linux client with its own choice descriptions, 13 Oct 2026.",
+        foot="Expected model per request set by hand before the run. Router on Apple M4 Pro in Asia; Foundry and Azure OpenAI in East US 2; Laya on the same Mac. 11 Oct 2026. OpenAI Decision API (gpt-6-luna) called directly from a separate Linux client with the same model descriptions and routing instructions, 14 Oct 2026.",
         total="total"),
      "zh": dict(
         acc_t="选对模型的次数，2 组 × 20 个路由请求",
@@ -23,7 +23,7 @@ T = {"en": dict(
         setA="A 组：沿用 Laya 那篇的题目（简单）", setB="B 组：贴近 Copilot 日常的提问（更难）",
         lat_t="每次决策耗时", lat_s="在 Model Router 内部计时（OpenAI 在客户端计时）· 中位数与 P95 · 每个引擎 3 轮 × 40 个请求",
         p50="中位数", p95="P95",
-        foot="每道题的期望模型在运行前人工定好。路由器跑在亚洲的 Apple M4 Pro 上；Foundry 与 Azure OpenAI 在美国东部 2；Laya 在同一台 Mac 上。2026-10-11。OpenAI Decision API（gpt-6-luna）从另一台 Linux 客户端直连调用，使用自己的选项描述，2026-10-13。",
+        foot="每道题的期望模型在运行前人工定好。路由器跑在亚洲的 Apple M4 Pro 上；Foundry 与 Azure OpenAI 在美国东部 2；Laya 在同一台 Mac 上。2026-10-11。OpenAI Decision API（gpt-6-luna）从另一台 Linux 客户端直连调用，使用相同的模型描述与路由指令，2026-10-14。",
         total="合计")}[LANG]
 CSS = """body{margin:0;background:#fff;font-family:-apple-system,'PingFang SC','Helvetica Neue','Noto Sans CJK SC',sans-serif}
 .card{width:1000px;padding:36px 40px 28px;background:#fbfaf8;border:1px solid #e7e5e0;border-radius:18px;box-sizing:border-box}
@@ -61,10 +61,10 @@ def latency():
 COST = json.load(open(ROOT / 'results' / 'cost.json'))
 CT = {"en": dict(t="Cost per million routing decisions", s="Measured tokens per decision × list price · USD",
                  laya="$0 per call (runs on your own machine)",
-                 foot="Decision-1 and Jev: $0.042 per million input tokens, output free. gpt-4.1-mini: Azure Global Standard $0.40 in / $1.60 out per million. Tokens are the averages billed over the same 40 requests: Decision-1 205 in, Jev 518 in + 82 out (free), LLM 214 in + 35 out. OpenAI Decision API (gpt-6-luna): $0.10 per million input tokens, no output or cache charges; 307 in."),
+                 foot="Decision-1 and Jev: $0.042 per million input tokens, output free. gpt-4.1-mini: Azure Global Standard $0.40 in / $1.60 out per million. Tokens are the averages billed over the same 40 requests: Decision-1 205 in, Jev 518 in + 82 out (free), LLM 214 in + 35 out. OpenAI Decision API (gpt-6-luna): $0.10 per million input tokens, no output or cache charges; 292 in."),
       "zh": dict(t="每百万次路由决策的费用", s="实测每次决策的 token 数 × 官方单价 · 美元",
                  laya="按次 0 美元（跑在你自己的机器上）",
-                 foot="Decision-1 与 Jev：每百万输入 token 0.042 美元，输出免费。gpt-4.1-mini：Azure 全球标准部署，每百万输入 0.40 / 输出 1.60 美元。token 数为同样 40 个请求的计费平均值：Decision-1 输入 205；Jev 输入 518、输出 82（免费）；LLM 输入 214、输出 35。OpenAI Decision API（gpt-6-luna）：每百万输入 token 0.10 美元，输出与缓存不计费；输入 307。")}[LANG]
+                 foot="Decision-1 与 Jev：每百万输入 token 0.042 美元，输出免费。gpt-4.1-mini：Azure 全球标准部署，每百万输入 0.40 / 输出 1.60 美元。token 数为同样 40 个请求的计费平均值：Decision-1 输入 205；Jev 输入 518、输出 82（免费）；LLM 输入 214、输出 35。OpenAI Decision API（gpt-6-luna）：每百万输入 token 0.10 美元，输出与缓存不计费；输入 292。")}[LANG]
 def cost():
     mx = max(COST[e]["per_million"] for e in E)
     rows = ""

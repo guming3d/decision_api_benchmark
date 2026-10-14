@@ -1,9 +1,9 @@
 """Rebuild every summary and cost file from the raw results, then merge them for the charts.
 
-Usage: python3 scripts/merge_results.py [guided|generic|detailed]
+Usage: python3 scripts/merge_results.py [original|guided|generic|detailed]
   results/router/results.json, usage-results.json -> results/router/summary.json, cost.json
   results/openai/results_openai_<catalog>.json    -> results/openai/summary_openai_<catalog>.json, cost_openai.json
-  router + the chosen OpenAI catalog (default guided) -> results/summary.json, results/cost.json
+  router + the chosen OpenAI catalog (default original) -> results/summary.json, results/cost.json
 """
 import json, sys
 from pathlib import Path
@@ -11,7 +11,7 @@ from metrics import cost, summarize
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
-CATALOG = sys.argv[1] if len(sys.argv) > 1 else "guided"
+CATALOG = sys.argv[1] if len(sys.argv) > 1 else "original"
 
 
 def load(path):
@@ -36,6 +36,9 @@ def costs(records):
     return {e: cost(e, [r["usage"] for r in records if r["engine"] == e and r.get("usage")]) for e in engines(records)}
 
 
+if not (RES / "openai" / f"results_openai_{CATALOG}.json").is_file():
+    sys.exit(f"no results/openai/results_openai_{CATALOG}.json; run scripts/bench_openai.py 3 {CATALOG} first")
+
 router_summary = summaries(load(RES / "router" / "results.json"))
 router_cost = costs(load(RES / "router" / "usage-results.json"))
 dump(router_summary, RES / "router" / "summary.json")
@@ -49,7 +52,5 @@ for path in sorted((RES / "openai").glob("results_openai_*.json")):
     openai_cost[catalog] = costs(records)["openai"]
 dump(openai_cost, RES / "openai" / "cost_openai.json")
 
-if CATALOG not in openai_cost:
-    sys.exit(f"no results/openai/results_openai_{CATALOG}.json; run scripts/bench_openai.py 3 {CATALOG} first")
 dump({**router_summary, "openai": load(RES / "openai" / f"summary_openai_{CATALOG}.json")["openai"]}, RES / "summary.json")
 dump({**router_cost, "openai": openai_cost[CATALOG]}, RES / "cost.json")
